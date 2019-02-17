@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context 
+						http://www.springframework.org/schema/context/spring-context.xsd">
+		
+		<!--使用resource标签注入时，无需使用xml配置文件注入 
+		注册stuService对象并注入对应的DAO代理对象 
+		<bean id="stuService" class="annotation.services.StudentServiceImpl">
+			<property name="stuDao" ref="studentDao"/>
+		</bean>-->
+
+		<!-- 每个配置文件的context:component-scan标签不会合并，因此每个配置文件都得注册 -->
+		<context:component-scan base-package="annotation.services"/>
+</beans>
