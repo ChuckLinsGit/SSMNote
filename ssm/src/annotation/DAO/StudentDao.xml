@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!-- 通过namespace为DAO接口实现代理 -->               
-<mapper namespace="annotation.DAO.StudentDao">
-	<insert id="insertStu" parameterType="Student">
-		INSERT INTO STUDENT (NAME,AGE,SCORE,CLASSID) VALUES(#{name},#{age},#{score},#{classid})
-	</insert>
-</mapper>
